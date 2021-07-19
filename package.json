@@ -16,7 +16,7 @@
     "node": ">=12"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Warn: no tests\"",
     "dependabump": "ncu -u && rm -rf package-lock.json node_modules || true && npm i",
     "clean": "rm -rf dist || true && mkdir dist",
     "compile:readme": "cat HEADER.md node_modules/p-queue/readme.md > README.md",
