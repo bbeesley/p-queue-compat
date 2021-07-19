@@ -20,6 +20,7 @@ jobs:
         with:
           main-branch: main
         env:
+          WORKSPACE: ${{ github.workspace }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_PA_TOKEN }}
   lint-commits:
