@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/bbeesley/p-queue-compat/compare/v1.0.2...v1.0.3) (2021-07-21)
+
+
+### Bug Fixes
+
+* ensure double compile doesnt break output ([9d9a44a](https://github.com/bbeesley/p-queue-compat/commit/9d9a44aaabd166ca190c777355d4c90113730314))
+
 ## [1.0.2](https://github.com/bbeesley/p-queue-compat/compare/v1.0.1...v1.0.2) (2021-07-21)
 
 ## [1.0.1](https://github.com/bbeesley/p-queue-compat/compare/v1.0.0...v1.0.1) (2021-07-19)
