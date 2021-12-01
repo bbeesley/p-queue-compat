@@ -1,3 +1,5 @@
+## [1.0.59](https://github.com/bbeesley/p-queue-compat/compare/v1.0.58...v1.0.59) (2021-12-01)
+
 ## [1.0.58](https://github.com/bbeesley/p-queue-compat/compare/v1.0.57...v1.0.58) (2021-11-30)
 
 ## [1.0.57](https://github.com/bbeesley/p-queue-compat/compare/v1.0.56...v1.0.57) (2021-11-30)
