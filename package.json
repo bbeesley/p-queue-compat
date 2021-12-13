@@ -1,6 +1,6 @@
 {
   "name": "p-queue-compat",
-  "version": "1.0.62",
+  "version": "1.0.63",
   "description": "Compatible version of p-queue",
   "type": "module",
   "main": "./dist/index.cjs",
