@@ -27,8 +27,8 @@ Useful for rate-limiting async (or sync) operations. For example, when interacti
 
 ## Install
 
-```
-$ npm install p-queue
+```sh
+npm install p-queue
 ```
 
 ## Usage
@@ -139,7 +139,7 @@ Note: If your items can potentially throw an exception, you must handle those er
 
 Type: `Function`
 
-Promise-returning/async function.
+Promise-returning/async function. When executed, it will receive `{signal}` as the first argument.
 
 #### options
 
@@ -151,6 +151,43 @@ Type: `number`\
 Default: `0`
 
 Priority of operation. Operations with greater priority will be scheduled first.
+
+##### signal
+
+*Requires Node.js 16 or later.*
+
+[`AbortSignal`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) for cancellation of the operation. When aborted, it will be removed from the queue and the `queue.add()` call will reject with an `AbortError`. If the operation is already running, the signal will need to be handled by the operation itself.
+
+```js
+import PQueue, {AbortError} from 'p-queue';
+import got, {CancelError} from 'got';
+
+const queue = new PQueue();
+
+const controller = new AbortController();
+
+try {
+	await queue.add(({signal}) => {
+		const request = got('https://sindresorhus.com');
+
+		signal.addEventListener('abort', () => {
+			request.cancel();
+		});
+
+		try {
+			return await request;
+		} catch (error) {
+			if (!(error instanceof CancelError)) {
+				throw error;
+			}
+		}
+	}, {signal: controller.signal});
+} catch (error) {
+	if (!(error instanceof AbortError)) {
+		throw error;
+	}
+}
+```
 
 #### .addAll(fns, options?)
 
@@ -348,6 +385,10 @@ await queue.add(() => delay(600));
 //=> 'Task is completed.  Size: 0  Pending: 0'
 ```
 
+### AbortError
+
+The error thrown by `queue.add()` when a job is aborted before it is run. See [`signal`](#signal).
+
 ## Advanced example
 
 A more advanced example to help you understand the flow.
@@ -457,6 +498,11 @@ const queue = new PQueue({queueClass: QueueClass});
 #### How do the `concurrency` and `intervalCap` options affect each other?
 
 They are just different constraints. The `concurrency` option limits how many things run at the same time. The `intervalCap` option limits how many things run in total during the interval (over time).
+
+## Maintainers
+
+- [Sindre Sorhus](https://github.com/sindresorhus)
+- [Richie Bendall](https://github.com/Richienb)
 
 ## Related
 
