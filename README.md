@@ -25,11 +25,17 @@ const queue = new PQueue({concurrency: 1});
 
 Useful for rate-limiting async (or sync) operations. For example, when interacting with a REST API or when doing CPU/memory intensive tasks.
 
+For servers, you probably want a Redis-backed [job queue](https://github.com/sindresorhus/awesome-nodejs#job-queues) instead.
+
+Note that the project is feature complete. We are happy to review pull requests, but we don't plan any further development. We are also not answering email support questions.
+
 ## Install
 
 ```sh
 npm install p-queue
 ```
+
+**Warning:** This package is native [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) and no longer provides a CommonJS export. If your project uses CommonJS, you'll have to [convert to ESM](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) or use the [dynamic `import()`](https://v8.dev/features/dynamic-import) function. Please don't open issues for questions regarding CommonJS / ESM. You can also use [version 6](https://github.com/sindresorhus/p-queue/tree/v6.6.2) instead which is pretty stable. We will backport security fixes to v6 for the foreseeable future.
 
 ## Usage
 
@@ -323,9 +329,17 @@ queue.on('error', error => {
 queue.add(() => Promise.reject(new Error('error')));
 ```
 
+#### empty
+
+Emitted every time the queue becomes empty.
+
+Useful if you for example add additional items at a later time.
+
 #### idle
 
 Emitted every time the queue becomes empty and all promises have completed; `queue.size === 0 && queue.pending === 0`.
+
+The difference with `empty` is that `idle` guarantees that all work from the queue has finished. `empty` merely signals that the queue is empty, but it could mean that some promises haven't completed yet.
 
 ```js
 import delay from 'delay';
