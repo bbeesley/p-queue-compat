@@ -3,12 +3,16 @@
   "version": "1.0.169",
   "description": "Compatible version of p-queue",
   "type": "module",
-  "main": "./dist/index.cjs",
   "exports": {
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.cjs"
+    ".": {
+      "import": "./dist/esm/index.js",
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/cjs/index.js"
+    }
   },
-  "types": "dist/index.d.ts",
+  "module": "./dist/esm/index.js",
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist"
   ],
@@ -19,11 +23,11 @@
     "pretest": "npm run compile",
     "test": "jest",
     "dependabump": "ncu -u && rm -rf package-lock.json node_modules || true && npm i",
-    "clean": "rm -rf dist || true && mkdir dist",
+    "clean": "rm -rf dist || true && mkdir -p dist/types",
     "compile:readme": "cat HEADER.md > README.md && cat node_modules/p-queue/readme.md | sed 's|p-timeout|p-timeout-compat|g' >> README.md",
-    "compile:mjs": "babel node_modules/p-queue/dist --out-dir dist --extensions '.js' --out-file-extension '.mjs'",
-    "compile:cjs": "babel node_modules/p-queue/dist --out-dir dist --extensions '.js' --out-file-extension '.cjs' --config-file ./babel.config.compat.cjs",
-    "compile:types": "find node_modules/p-queue/dist -type f -iname '*.d.ts' -exec cp \\{\\} dist/ \\; && find dist -type f -iname '*.ts' -exec sed 's|p-timeout|p-timeout-compat|g' -i \\{\\} \\;",
+    "compile:mjs": "babel node_modules/p-queue/dist --out-dir dist/ejs --extensions '.js' --out-file-extension '.js'",
+    "compile:cjs": "babel node_modules/p-queue/dist --out-dir dist/cjs --extensions '.js' --out-file-extension '.js' --config-file ./babel.config.compat.cjs",
+    "compile:types": "find node_modules/p-queue/dist -type f -iname '*.d.ts' -exec cp \\{\\} dist/types \\; && find dist -type f -iname '*.ts' -exec sed 's|p-timeout|p-timeout-compat|g' -i \\{\\} \\;",
     "precompile": "npm run clean",
     "compile": "npm-run-all compile:*",
     "prerelease": "npm run compile",
