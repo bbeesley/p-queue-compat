@@ -1,3 +1,10 @@
+## [1.0.171](https://github.com/bbeesley/p-queue-compat/compare/v1.0.170...v1.0.171) (2022-09-05)
+
+
+### Bug Fixes
+
+* build to correct path ([e090b06](https://github.com/bbeesley/p-queue-compat/commit/e090b063b34fe193880e53e3d767787972bf972e))
+
 ## [1.0.170](https://github.com/bbeesley/p-queue-compat/compare/v1.0.169...v1.0.170) (2022-09-05)
 
 
