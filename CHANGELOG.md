@@ -1,3 +1,10 @@
+## [1.0.170](https://github.com/bbeesley/p-queue-compat/compare/v1.0.169...v1.0.170) (2022-09-05)
+
+
+### Bug Fixes
+
+* add support for ts esm modules ([dbbf510](https://github.com/bbeesley/p-queue-compat/commit/dbbf5109bb4cfb7f67a3ed2c9bc01bbc5b2255dc))
+
 ## [1.0.169](https://github.com/bbeesley/p-queue-compat/compare/v1.0.168...v1.0.169) (2022-09-05)
 
 ## [1.0.168](https://github.com/bbeesley/p-queue-compat/compare/v1.0.167...v1.0.168) (2022-09-05)
