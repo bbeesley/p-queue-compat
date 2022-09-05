@@ -14,7 +14,6 @@ module.exports = function configureBabel(api) {
   ];
 
   const plugins = [
-    ["babel-plugin-add-import-extension", { extension: "cjs", replace: true }],
     [
       "search-and-replace",
       {

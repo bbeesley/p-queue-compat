@@ -18,10 +18,6 @@ module.exports = function configureBabel(api) {
     ? []
     : [
         [
-          "babel-plugin-add-import-extension",
-          { extension: "mjs", replace: true },
-        ],
-        [
           "search-and-replace",
           {
             rules: [
