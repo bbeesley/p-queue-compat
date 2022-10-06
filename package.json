@@ -5,13 +5,13 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/esm/index.js",
       "types": "./dist/types/index.d.ts",
-      "require": "./dist/cjs/index.js"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
     }
   },
   "module": "./dist/esm/index.js",
-  "main": "./dist/cjs/index.js",
+  "main": "./dist/cjs/index.cjs",
   "types": "./dist/types/index.d.ts",
   "files": [
     "dist"
@@ -26,7 +26,7 @@
     "clean": "rm -rf dist || true && mkdir -p dist/types",
     "compile:readme": "cat HEADER.md > README.md && cat node_modules/p-queue/readme.md | sed 's|p-timeout|p-timeout-compat|g' >> README.md",
     "compile:mjs": "babel node_modules/p-queue/dist --out-dir dist/esm --extensions '.js' --out-file-extension '.js'",
-    "compile:cjs": "babel node_modules/p-queue/dist --out-dir dist/cjs --extensions '.js' --out-file-extension '.js' --config-file ./babel.config.compat.cjs",
+    "compile:cjs": "babel node_modules/p-queue/dist --out-dir dist/cjs --extensions '.js' --out-file-extension '.cjs' --config-file ./babel.config.compat.cjs",
     "compile:types": "find node_modules/p-queue/dist -type f -iname '*.d.ts' -exec cp \\{\\} dist/types \\; && find dist -type f -iname '*.ts' -exec sed 's|p-timeout|p-timeout-compat|g' -i \\{\\} \\;",
     "precompile": "npm run clean",
     "compile": "npm-run-all compile:*",
