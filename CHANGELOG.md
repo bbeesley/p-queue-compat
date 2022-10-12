@@ -1,3 +1,11 @@
+## [1.0.188](https://github.com/bbeesley/p-queue-compat/compare/v1.0.187...v1.0.188) (2022-10-12)
+
+
+### Bug Fixes
+
+* correct cjs extensions ([86ff017](https://github.com/bbeesley/p-queue-compat/commit/86ff017e36c2bf3cbef42af26d20a555255c5599))
+* correct type exports for new ts modules ([d11f9c7](https://github.com/bbeesley/p-queue-compat/commit/d11f9c784b829348cf7d8af126fc721689377c3a))
+
 ## [1.0.187](https://github.com/bbeesley/p-queue-compat/compare/v1.0.186...v1.0.187) (2022-10-05)
 
 ## [1.0.186](https://github.com/bbeesley/p-queue-compat/compare/v1.0.185...v1.0.186) (2022-10-03)
