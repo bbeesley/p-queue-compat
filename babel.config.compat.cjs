@@ -25,6 +25,10 @@ module.exports = function configureBabel(api) {
         ],
       },
     ],
+    [
+      'babel-plugin-replace-import-extension',
+      { extMapping: { '.js': '.cjs' } },
+    ],
   ];
 
   return {
