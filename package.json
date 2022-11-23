@@ -1,6 +1,6 @@
 {
   "name": "p-queue-compat",
-  "version": "1.0.206",
+  "version": "1.0.207",
   "description": "Compatible version of p-queue",
   "type": "module",
   "exports": {
