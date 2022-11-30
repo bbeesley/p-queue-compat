@@ -1,3 +1,10 @@
+## [1.0.210](https://github.com/bbeesley/p-queue-compat/compare/v1.0.209...v1.0.210) (2022-11-30)
+
+
+### Bug Fixes
+
+* downgrade eventemitter3 ([078ad31](https://github.com/bbeesley/p-queue-compat/commit/078ad31a52248a5d34894e95d6f99a8a8ad44042))
+
 ## [1.0.209](https://github.com/bbeesley/p-queue-compat/compare/v1.0.208...v1.0.209) (2022-11-30)
 
 ## [1.0.208](https://github.com/bbeesley/p-queue-compat/compare/v1.0.207...v1.0.208) (2022-11-29)
