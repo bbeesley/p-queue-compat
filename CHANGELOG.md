@@ -1,3 +1,10 @@
+## [1.0.221](https://github.com/bbeesley/p-queue-compat/compare/v1.0.220...v1.0.221) (2023-04-05)
+
+
+### Bug Fixes
+
+* require error in p-timeout-compat ([c1f2843](https://github.com/bbeesley/p-queue-compat/commit/c1f28438b4a4403573d4b38080f61354310d0773))
+
 ## [1.0.220](https://github.com/bbeesley/p-queue-compat/compare/v1.0.219...v1.0.220) (2023-04-05)
 
 ## [1.0.219](https://github.com/bbeesley/p-queue-compat/compare/v1.0.218...v1.0.219) (2023-01-05)
