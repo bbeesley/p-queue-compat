@@ -114,7 +114,8 @@
             {
               "type": "chore",
               "scope": "deps*",
-              "release": "patch"
+              "release": "patch",
+              "subject": "bump p-timeout *"
             }
           ]
         }
