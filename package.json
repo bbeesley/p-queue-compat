@@ -115,7 +115,7 @@
               "type": "chore",
               "scope": "deps*",
               "release": "patch",
-              "subject": "bump p-timeout *"
+              "subject": "bump p-*"
             }
           ]
         }
