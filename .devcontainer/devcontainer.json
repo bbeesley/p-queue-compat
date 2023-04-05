@@ -28,7 +28,7 @@
 				"configureZshAsDefaultShell" : true,
 				"installOhMyZsh" : true,
 				"nonFreePackages" : true,
-				"nstallZsh" : true,
+				"installZsh" : true,
 				"upgradePackages" : true
 		 },
 		 "ghcr.io/devcontainers/features/github-cli:1" : {},
