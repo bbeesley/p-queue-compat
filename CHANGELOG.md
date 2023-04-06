@@ -1,3 +1,10 @@
+## [1.0.222](https://github.com/bbeesley/p-queue-compat/compare/v1.0.221...v1.0.222) (2023-04-06)
+
+
+### Bug Fixes
+
+* bump to fixed version of p-timeout-compat ([e041449](https://github.com/bbeesley/p-queue-compat/commit/e041449d65d1a998609cad0890ae79658b130f73))
+
 ## [1.0.221](https://github.com/bbeesley/p-queue-compat/compare/v1.0.220...v1.0.221) (2023-04-05)
 
 
