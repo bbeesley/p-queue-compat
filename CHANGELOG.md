@@ -1,3 +1,5 @@
+## [1.0.225](https://github.com/bbeesley/p-queue-compat/compare/v1.0.224...v1.0.225) (2023-09-04)
+
 ## [1.0.224](https://github.com/bbeesley/p-queue-compat/compare/v1.0.223...v1.0.224) (2023-08-31)
 
 ## [1.0.223](https://github.com/bbeesley/p-queue-compat/compare/v1.0.222...v1.0.223) (2023-06-13)
