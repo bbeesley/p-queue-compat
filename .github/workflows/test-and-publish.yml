@@ -25,6 +25,7 @@ jobs:
           WORKSPACE: ${{ github.workspace }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_PA_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PA_TOKEN }}
   lint-commits:
     runs-on: ubuntu-latest
     timeout-minutes: 5
