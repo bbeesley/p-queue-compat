@@ -1,12 +1,15 @@
 version: 2
 
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    timezone: Europe/London
-  open-pull-requests-limit: 10
-  commit-message:
-    prefix: chore
-    include: scope
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: daily
+      timezone: Europe/London
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: chore
+      include: scope
+    ignore:
+      - dependency-name: "@semantic-release/*"
+      - dependency-name: "semantic-release"
