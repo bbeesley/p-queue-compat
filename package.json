@@ -86,7 +86,7 @@
     "babel-plugin-search-and-replace": "^1.1.0",
     "conventional-changelog-angular": "^8.0.0",
     "cz-conventional-changelog": "^3.3.0",
-    "delay": "^5.0.0",
+    "delay": "^7.0.0",
     "jest": "^30.0.0",
     "jest-config": "^30.0.0",
     "npm-check-updates": "^19.0.0",
